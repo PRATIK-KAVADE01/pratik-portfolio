@@ -1,154 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratik Kavade | Portfolio</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --card-bg: #f5f5f5;
+            --accent: #000000;
+        }body.dark {
+        --bg-color: #000000;
+        --text-color: #ffffff;
+        --card-bg: #1a1a1a;
+        --accent: #ffffff;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    header {
+        padding: 50px 20px;
+        text-align: center;
+        border-bottom: 2px solid var(--accent);
+        animation: fadeDown 1s ease;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.6rem;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 1.1rem;
+        opacity: 0.8;
+    }
+
+    .toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 8px 14px;
+        border: 1px solid var(--accent);
+        background: transparent;
+        color: var(--text-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .toggle:hover {
+        background: var(--accent);
+        color: var(--bg-color);
+    }
+
+    section {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 25px;
+        background: var(--card-bg);
+        border-radius: 8px;
+        animation: fadeUp 1s ease;
+    }
+
+    section h2 {
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--accent);
+        padding-bottom: 5px;
+        letter-spacing: 1px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+
+    .skills span {
+        display: inline-block;
+        border: 1px solid var(--accent);
+        padding: 8px 14px;
+        margin: 6px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        transition: transform 0.3s ease;
+    }
+
+    .skills span:hover {
+        transform: scale(1.1);
+    }
+
+    .links a {
+        display: inline-block;
+        margin-right: 15px;
+        margin-top: 10px;
+        text-decoration: none;
+        color: var(--text-color);
+        border-bottom: 1px solid var(--accent);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        border-top: 2px solid var(--accent);
+        margin-top: 40px;
+        animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
         }
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+    }
+
+    @keyframes fadeDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
         }
-        header p {
-            margin-top: 10px;
-            font-size: 1.1rem;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-        section {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        section h2 {
-            color: #2a5298;
-            margin-bottom: 15px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        ul li {
-            margin-bottom: 8px;
-        }
-        .skills span {
-            display: inline-block;
-            background: #e6ecf5;
-            color: #2a5298;
-            padding: 8px 12px;
-            margin: 6px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        .links a {
-            display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #2a5298;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2a5298;
-            color: #fff;
-            margin-top: 30px;
-        }
-    </style>
+    }
+</style>
+
 </head>
-<body>
+<body><button class="toggle" onclick="toggleDarkMode()">Dark Mode</button>
 
 <header>
     <h1>Pratik Kavade</h1>
-    <p>Computer Engineering Student | Python & AI Enthusiast | App & Game Developer</p>
-</header>
-
-<section>
+    <p>Computer Engineering Student | Python & AI Enthusiast</p>
+</header><section>
     <h2>About Me</h2>
     <p>
-        I am a Computer Engineering student with a strong interest in developing useful applications and games.
-        I enjoy working with Python and Artificial Intelligence to solve real-world problems.
-        I am a quick learner with a curious mindset and a passion for exploring new technologies.
-        My goal is to build applications that are practical, user-friendly, and beneficial for people.
+        I am a Computer Engineering student passionate about developing applications and games that solve real-world problems.
+        I have a strong interest in Python and Artificial Intelligence, and I enjoy learning new technologies.
+        I am a quick learner with a curious mindset and a strong desire to build meaningful and useful software.
     </p>
-</section>
-
-<section>
+</section><section>
     <h2>Skills</h2>
     <div class="skills">
         <span>Python</span>
         <span>C Programming</span>
         <span>HTML</span>
-        <span>Basic CSS</span>
+        <span>CSS Basics</span>
         <span>AI Fundamentals</span>
         <span>Problem Solving</span>
         <span>Logical Thinking</span>
-        <span>Continuous Learning</span>
+        <span>Quick Learner</span>
     </div>
-</section>
-
-<section>
+</section><section>
     <h2>Interests & Goals</h2>
     <ul>
         <li>Application and Game Development</li>
         <li>Artificial Intelligence and Automation</li>
-        <li>Building solutions for real-world problems</li>
-        <li>Improving coding and system design skills</li>
-        <li>Becoming a professional software developer</li>
+        <li>Building user-friendly solutions</li>
+        <li>Continuous learning and self-improvement</li>
+        <li>Creating impactful software for people</li>
     </ul>
-</section>
-
-<section>
+</section><section>
     <h2>Projects</h2>
-    <p>
-        I am currently working on improving my skills and building projects.
-        Some upcoming projects will include:
-    </p>
-    <ul>
-        <li>Python-based utility applications</li>
-        <li>AI-powered mini projects</li>
-        <li>Simple games and web applications</li>
-    </ul>
-    <p>
-        More projects will be added soon on my GitHub profile.
-    </p>
-</section>
-
-<section>
+    <p><strong>Projects coming soon.</strong></p>
+    <p>I am currently working on Python, AI, and application development projects. They will be added here shortly.</p>
+</section><section>
     <h2>Languages</h2>
     <ul>
         <li>Marathi</li>
         <li>English</li>
         <li>Hindi</li>
     </ul>
-</section>
-
-<section>
+</section><section>
     <h2>Contact & Profiles</h2>
     <p>Email: <strong>pratikkavade2961@gmail.com</strong></p>
     <div class="links">
         <a href="https://github.com/PRATIK-KAVADE01" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/pratik-kavade-8a13b63a0" target="_blank">LinkedIn</a>
     </div>
-</section>
-
-<footer>
-    <p>© 2026 Pratik Kavade | Portfolio Website</p>
-</footer>
-
-</body>
+</section><footer>
+    <p>© 2026 Pratik Kavade | Portfolio</p>
+</footer><script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+    }
+</script></body>
 </html>
