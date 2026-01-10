@@ -91,6 +91,35 @@ section h2 {
     border-left: 4px solid var(--accent);
     padding-left: 12px;
 }
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.certificate-card {
+    background: var(--bg-color);
+    border: 1px solid var(--accent);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+}
+
+.certificate-card h3 {
+    margin-top: 0;
+}
+
+.certificate-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    color: var(--text-color);
+        }
 
 /* Skills */
 .skills span {
