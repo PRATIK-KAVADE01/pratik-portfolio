@@ -91,6 +91,7 @@ section h2 {
     border-left: 4px solid var(--accent);
     padding-left: 12px;
 }
+
 .certificates {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
